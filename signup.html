@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+
+<style>
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    margin-bottom: 10px;
+  }
+  
+  input {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 5px;
+  }
+  
+  button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #logout-btn {
+    display: none;
+  }
+  
+</style>
+<body>
+  <div class="container">
+    <h1>Signup</h1>
+    <form id="signup-form">
+      <input type="text" id="signup-email" placeholder="Email">
+      <input type="password" id="signup-password" placeholder="Password">
+      <button type="submit">Sign Up</button>
+    </form>
+
+    <h1>Login</h1>
+    <form id="login-form">
+      <input type="text" id="login-email" placeholder="Email">
+      <input type="password" id="login-password" placeholder="Password">
+      <button type="submit">Log In</button>
+    </form>
+
+    <button id="logout-btn">Log Out</button>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
+
+<script>
+  // Your Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCAH9sHyJpetChRHPZeo6pBnGsP55vdly8",
+    authDomain: "school-com-f2699.firebaseapp.com",
+    projectId: "school-com-f2699",
+  };
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+  <script src="signup.js"></script>
+</body>
+</html>

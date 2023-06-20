@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
 :root{
+    /* --primary-color-hue: 252; */
     --color-white: hsl(252, 30%, 100%);
     --color-light: hsl(252, 30%, 95%);
     --color-gray: hsl(252, 15%, 65%);
-    --color-primary: hwb(252 30% 10%);
+    /* --color-primary: hsl(var(--primary-color-hue), 75% 60%); */
     --color-secondary: hsl(252, 100%, 90%);
     --color-dark: hsl(120, 95%, 65%);
     --color-danger: hsl(0, 95%, 65%);
     --color-dark: hsl(252, 30%, 17%);
     --color-black: hsl(252, 30%, 10%);
     --color-success: hsl(125, 78%, 57%);
+    --color-primary: blue;
+    
 
 
     --border-radius: 2rem;
@@ -553,6 +556,7 @@ main .container .right{
     padding: 3rem;
     border-radius: var(--card-border-radius);
     width: 50%;
+    box-shadow: 0 0 1rem var(--color-primary);
 }
 
 /* Font-size */
@@ -586,7 +590,7 @@ main .container .right{
     cursor: pointer;
 }
 
-.customize-theme .choose-size span .active{
+.customize-theme .choose-size span.active{
     background: var(--color-primary);
 }
 
@@ -712,6 +716,10 @@ main .container .right{
     .left .btn{
         display: none;
     }
+    
+    .customize-theme .card{
+        width: 80vw;
+    }
 }
 
 /* Media Queries for Small tablets and Big Tablets */
@@ -752,5 +760,9 @@ main .container .right{
 
     main .container .right {
         display: none;
+    }
+
+    .customize-theme .card{
+        width: 92vw;
     }
 }
